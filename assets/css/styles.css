@@ -318,6 +318,26 @@ p:last-child { margin-bottom: 0; }
 .cta-block { background-color: var(--green-50); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(28px, 4vw, 44px); }
 .cta-block__action { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-top: 28px; }
 .cta-block__action .wbr-logo { margin-bottom: 0; }
+.network { position: relative; overflow: hidden; isolation: isolate; }
+.network::before, .network::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none; aspect-ratio: 1;
+  background: url("../img/cln-network.webp") center / contain no-repeat;
+}
+.network { --net-a: min(640px, 88vw); --net-b: min(520px, 72vw); }
+.network::before { width: var(--net-a); left: calc(var(--net-a) * -.18); top: calc(var(--net-a) * -.45); transform: rotate(-14deg); }
+.network::after { width: var(--net-b); right: calc(var(--net-b) * -.17); bottom: calc(var(--net-b) * -.6); transform: rotate(12deg) scaleX(-1); }
+.network__card {
+  padding: clamp(28px, 5vw, 56px); border-radius: var(--radius-lg);
+  background: rgba(255,255,255,.84); border: 1px solid rgba(255,255,255,.9); box-shadow: var(--shadow-md);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+}
+.network .lede { color: var(--ink-700); }
+@media (prefers-reduced-motion: no-preference) {
+  .network::before { animation: net-drift-a 26s ease-in-out infinite alternate; }
+  .network::after { animation: net-drift-b 32s ease-in-out infinite alternate; }
+}
+@keyframes net-drift-a { from { transform: rotate(-14deg) translate(0, 0); } to { transform: rotate(-10deg) translate(14px, 10px); } }
+@keyframes net-drift-b { from { transform: rotate(12deg) scaleX(-1) translate(0, 0); } to { transform: rotate(8deg) scaleX(-1) translate(14px, -10px); } }
 .surplus { background: var(--green-900) url("../img/surplus-rolls.jpg") center / cover no-repeat; }
 .surplus .cta-block { max-width: 640px; background-color: rgba(242,246,251,.85); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 @media (max-width: 820px) {
@@ -550,7 +570,7 @@ p:last-child { margin-bottom: 0; }
    =========================================================== */
 .contact-grid {
   display: grid; gap: clamp(32px, 4vw, 56px);
-  grid-template-columns: 1fr 1.1fr; align-items: start;
+  grid-template-columns: .85fr 1.15fr; align-items: start;
 }
 @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
 
@@ -570,7 +590,7 @@ p:last-child { margin-bottom: 0; }
 .info-item a:hover { text-decoration: underline; }
 
 .form-card {
-  background: #fff; border: 1px solid var(--line);
+  background: var(--paper-2); border: 1px solid var(--line);
   border-radius: var(--radius-lg); padding: clamp(26px, 3.5vw, 40px);
   box-shadow: var(--shadow-sm);
 }
@@ -588,11 +608,30 @@ p:last-child { margin-bottom: 0; }
 .field textarea { min-height: 140px; resize: vertical; }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none; border-color: var(--green-600);
-  box-shadow: 0 0 0 3px rgba(0,137,81,.16);
+  box-shadow: 0 0 0 3px rgba(22,88,167,.18);
 }
 .field-row { display: grid; gap: 0 20px; grid-template-columns: 1fr 1fr; }
 @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
 .form-note { font-size: .86rem; color: var(--ink-300); margin-top: 16px; }
+.form-card .form-note { color: var(--ink-500); margin-top: 14px; }
+.form-card .form-note a { color: var(--green-700); font-weight: 600; }
+.form-card > h2 { margin-bottom: 0; }
+
+.rep-card { display: flex; align-items: center; gap: 14px; margin: 20px 0 24px; }
+.rep-card__photo {
+  flex-shrink: 0; width: 58px; height: 58px; border-radius: 50%; overflow: hidden;
+  background: var(--green-600); color: #fff; display: grid; place-items: center;
+  font: 700 1.05rem/1 var(--font-cond); letter-spacing: .06em;
+}
+.rep-card__photo img { width: 100%; height: 100%; object-fit: cover; }
+.rep-card h4 { margin: 0; font-size: 1rem; color: var(--ink-900); }
+.rep-card span { font-size: .86rem; color: var(--ink-500); }
+
+.field-group { border: 0; padding: 0; min-width: 0; margin: 0 0 20px; }
+.field-group legend { padding: 0; margin-bottom: 10px; font-size: .9rem; font-weight: 500; color: var(--ink-900); }
+.checks { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.check { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: .92rem; font-weight: 500; color: var(--ink-700); }
+.check input { width: 16px; height: 16px; margin: 0; flex-shrink: 0; accent-color: var(--green-600); }
 
 /* ===========================================================
    Quote / award
