@@ -616,6 +616,7 @@ p:last-child { margin-bottom: 0; }
 .form-card .form-note { color: var(--ink-500); margin-top: 14px; }
 .form-card .form-note a { color: var(--green-700); font-weight: 600; }
 .form-card > h2 { margin-bottom: 0; }
+.form-card { scroll-margin-top: calc(var(--header-h) + 24px); }
 
 .rep-card { display: flex; align-items: center; gap: 14px; margin: 20px 0 24px; }
 .rep-card__photo {
