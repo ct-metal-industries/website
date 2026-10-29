@@ -313,6 +313,13 @@ p:last-child { margin-bottom: 0; }
   width: 100%; border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md); aspect-ratio: 4/3; object-fit: cover;
 }
+.wbr-logo { display: block; width: fit-content; margin-bottom: 22px; }
+.wbr-logo img { display: block; height: 72px; width: auto; }
+.cta-block { background-color: var(--green-50); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(28px, 4vw, 44px); }
+.cta-block__action { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-top: 28px; }
+.cta-block__action .wbr-logo { margin-bottom: 0; }
+.surplus { background: var(--green-900) url("../img/surplus-rolls.jpg") center / cover no-repeat; }
+.surplus .cta-block { max-width: 640px; background-color: rgba(242,246,251,.85); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 @media (max-width: 820px) {
   .split { grid-template-columns: 1fr; }
   .split--reverse .split__media { order: 0; }
@@ -396,6 +403,7 @@ p:last-child { margin-bottom: 0; }
 .site-footer a { color: #b8c3c8; text-decoration: none; transition: color .16s ease; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 .site-footer address { font-style: normal; color: #b8c3c8; }
+.footer__map { display: block; width: 100%; height: 150px; margin-top: 16px; border: 1px solid rgba(255,255,255,.14); border-radius: 8px; background: #1b2226; }
 
 .footer__bottom {
   border-top: 1px solid rgba(255,255,255,.11);
@@ -440,7 +448,7 @@ p:last-child { margin-bottom: 0; }
 }
 .announce__tag {
   display: inline-flex; align-items: center; gap: 7px;
-  background: #ffc61a; color: #3d2a00;
+  background: #7fa4ce; color: #081a34;
   font-size: .74rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase;
   padding: 5px 12px; border-radius: 100px; flex-shrink: 0;
 }
@@ -454,7 +462,7 @@ p:last-child { margin-bottom: 0; }
   padding-bottom: 1px; white-space: nowrap;
   transition: border-color .16s ease;
 }
-.announce__link:hover { border-color: #ffc61a; }
+.announce__link:hover { border-color: #7fa4ce; }
 .announce__link svg { width: 15px; height: 15px; transition: transform .18s ease; }
 .announce__link:hover svg { transform: translateX(3px); }
 
@@ -475,7 +483,7 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 820px) { .buyback { grid-template-columns: 1fr; } }
 .buyback h2 { color: #fff; margin-bottom: .5em; }
 .buyback p { color: rgba(255,255,255,.86); }
-.buyback .eyebrow { color: #ffc61a; }
+.buyback .eyebrow { color: #7fa4ce; }
 .buyback__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
 .buyback__steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
 .buyback__steps li {
@@ -486,7 +494,7 @@ p:last-child { margin-bottom: 0; }
 }
 .buyback__steps b {
   flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
-  background: #ffc61a; color: #3d2a00;
+  background: #7fa4ce; color: #081a34;
   display: grid; place-items: center; font-size: .88rem; font-weight: 900;
 }
 .buyback__steps span { font-size: .96rem; color: rgba(255,255,255,.88); line-height: 1.5; }
@@ -759,9 +767,9 @@ p:last-child { margin-bottom: 0; }
    labels: condensed 500 caps, wide tracking
    headings: condensed 700 italic caps, tight
    nav + buttons: condensed 700 caps
-   CTA colour: yellow pill, navy text
+   CTA colour: light-blue pill, navy text (white text fails contrast on #7fa4ce)
    =========================================================== */
-:root { --cta: #eef04e; --cta-deep: #f4ce4a; --cta-ink: #081a34; }
+:root { --cta: #7fa4ce; --cta-deep: #6490c4; --cta-ink: #081a34; }
 
 .eyebrow { font: 500 .82rem/1 var(--font-cond); letter-spacing: .2em; text-transform: uppercase; color: var(--green-900); }
 h1, h2 { font-family: var(--font-cond); font-weight: 700; font-style: italic; text-transform: uppercase; letter-spacing: -.005em; line-height: 1.0; }
@@ -800,7 +808,7 @@ h2 { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.1rem); }
 /* no background pill on nav hover — brand motifs carry the hover state */
 .nav__list a:hover, .site-header .nav__list a:hover { background: transparent !important; }
 
-/* Yellow action tick list (used inside cards) */
+/* Highlight-coloured action tick list (used inside cards; class name predates the colour change) */
 .list-yellow { list-style: none; margin: 4px 0 10px; padding: 0; display: grid; gap: 7px; }
 .list-yellow li { display: flex; gap: 10px; align-items: flex-start; font-size: .93rem; line-height: 1.4; color: var(--ink-700); }
 .list-yellow li::before { content: ""; flex-shrink: 0; width: 18px; height: 18px; margin-top: 1px; border-radius: 50%; background: var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23081a34' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center / 11px no-repeat; }

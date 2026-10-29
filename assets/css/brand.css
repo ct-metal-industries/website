@@ -1,25 +1,25 @@
 /* CT Metal Industries — brand tokens from the new logo suite (Sept 2026)
-   Group palette: navy #081a34 + blue #1658a7. Accent: #7fa5d0
+   Group palette: navy #081a34 + blue #1658a7. Accent: #7fa4ce
    Token names kept generic (--green-*) for kit compatibility. */
 :root {
   --green-900:#081a34; --green-800:#0b2a55; --green-700:#0f4587; --green-600:#1658a7;
   --green-500:#3b78c4; --green-100:#e3ecf7; --green-50:#f2f6fb;
-  --accent:#7fa5d0;
+  --accent:#7fa4ce;
   --scrim-a: rgba(8,26,52,.94); --scrim-b: rgba(10,38,80,.86); --scrim-c: rgba(22,88,167,.55);
   --pscrim-a: rgba(8,26,52,.93); --pscrim-b: rgba(15,69,135,.78);
 }
 
 
 /* ---- Motif: the coil ring — three arced segments (navy/blue/light blue), thin parallel hairlines ---- */
-:root { --seg: linear-gradient(to right, #081a34 0 33.3%, #1658a7 33.3% 66.6%, #7fa5d0 66.6% 100%); }
+:root { --seg: linear-gradient(to right, #081a34 0 33.3%, #1658a7 33.3% 66.6%, #7fa4ce 66.6% 100%); }
 /* the tri-segment bar is the signature rule */
 .eyebrow { padding-bottom: 10px; background: var(--seg) left bottom / 66px 3px no-repeat; }
-.mcard, .card, .tile, .form-card, .aside-card { border-top: 4px solid transparent; background-image: var(--seg); background-size: 100% 4px; background-repeat: no-repeat; background-position: top; background-origin: border-box; }
+.mcard, .card, .tile, .form-card, .aside-card, .cta-block { border-top: 4px solid transparent; background-image: var(--seg); background-size: 100% 4px; background-repeat: no-repeat; background-position: top; background-origin: border-box; }
 .mcard:hover { transform: translateY(-3px); }
 /* ring bullet for checklists (conic tri-segment, masked to a ring) */
 .list-check svg { display: none; }
 .list-check li::before { content: ""; flex-shrink: 0; width: 20px; height: 20px; margin: 3px 12px 0 0; border-radius: 50%;
-  background: conic-gradient(#081a34 0 120deg, #1658a7 120deg 240deg, #7fa5d0 240deg 360deg);
+  background: conic-gradient(#081a34 0 120deg, #1658a7 120deg 240deg, #7fa4ce 240deg 360deg);
   -webkit-mask: radial-gradient(circle, transparent 0 5px, #000 5.5px); mask: radial-gradient(circle, transparent 0 5px, #000 5.5px); }
 /* triple hairline under stat figures — the striations */
 .stat__num { padding-bottom: 12px; background: repeating-linear-gradient(to bottom, var(--line) 0 1px, transparent 1px 4px) left bottom / 44px 10px no-repeat; }
@@ -32,7 +32,7 @@
   -webkit-mask: radial-gradient(circle, transparent 0 62%, #000 62.5%); mask: radial-gradient(circle, transparent 0 62%, #000 62.5%); }
 /* gallery thumbs get the segment bar on hover */
 .gallery img { transition: box-shadow .18s ease, transform .18s ease; }
-.gallery img:hover { transform: translateY(-3px); box-shadow: 0 4px 0 #1658a7, 0 8px 0 #7fa5d0; }
+.gallery img:hover { transform: translateY(-3px); box-shadow: 0 4px 0 #1658a7, 0 8px 0 #7fa4ce; }
 /* section-tint bands carry faint hairlines */
 .section--tint { background-image: repeating-linear-gradient(to right, rgba(8,26,52,.035) 0 1px, transparent 1px 64px); }
 
@@ -44,7 +44,7 @@
   background: var(--seg) left / 0 100% no-repeat; transition: background-size .3s steps(3, end); }
 .nav__list a:hover::after, .nav__list a[aria-current="page"]::after { background-size: 100% 100%; background-color: transparent; }
 .site-header--overlay:not(.is-stuck) .nav__list a::after,
-.site-header--overlay:not(.is-stuck) .nav__list a[aria-current="page"]::after { background-image: linear-gradient(to right, #fff 0 33.3%, #7fa5d0 33.3% 66.6%, rgba(255,255,255,.55) 66.6%); background-color: transparent; }
+.site-header--overlay:not(.is-stuck) .nav__list a[aria-current="page"]::after { background-image: linear-gradient(to right, #fff 0 33.3%, #7fa4ce 33.3% 66.6%, rgba(255,255,255,.55) 66.6%); background-color: transparent; }
 .nav__list a:hover { background: none; }
 
 /* active state: explicit geometry (the kit default sets height:2px at higher specificity) */

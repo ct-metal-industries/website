@@ -57,7 +57,7 @@
   if (!pairs.length) return;
 
   var all = [].slice.call(document.querySelectorAll('.nav__list a'));
-  var homeLink = all.filter(function (a) { return a.getAttribute('href').indexOf('#') === -1; })[0] || null;
+  var homeLink = all.filter(function (a) { return /^(index\.html)?$/.test(a.getAttribute('href')); })[0] || null;
   var current = null;
 
   function setActive(a) {
