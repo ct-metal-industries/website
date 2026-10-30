@@ -66,7 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Condensed:ital,wght@0,400;0,500;0,700;1,700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=d307a10d">
+<link rel="stylesheet" href="assets/css/styles.css?v=26a81487">
 <link rel="stylesheet" href="assets/css/brand.css?v=2f48b66b">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -129,31 +129,45 @@
               <span>Recycling Solutions Specialist</span>
             </div>
           </div>
-          <form action="#" method="post" novalidate>
-            <div class="field-row">
-              <div class="field"><label for="first-name">First name <span class="req" aria-hidden="true">*</span></label><input type="text" id="first-name" name="first_name" autocomplete="given-name" required></div>
-              <div class="field"><label for="last-name">Last name <span class="req" aria-hidden="true">*</span></label><input type="text" id="last-name" name="last_name" autocomplete="family-name" required></div>
-            </div>
-            <div class="field-row">
-              <div class="field"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input type="email" id="email" name="email" autocomplete="email" required></div>
-              <div class="field"><label for="company">Company name</label><input type="text" id="company" name="company" autocomplete="organization"></div>
-            </div>
-            <fieldset class="field-group">
-              <legend>Material(s) you're interested in (check all that apply)</legend>
-              <div class="checks">
-            <label class="check"><input type="checkbox" name="materials" value="Aluminum Foil &amp; Laminates"> Aluminum Foil &amp; Laminates</label>
-            <label class="check"><input type="checkbox" name="materials" value="Metallized Film &amp; Paper Rolls"> Metallized Film &amp; Paper Rolls</label>
-            <label class="check"><input type="checkbox" name="materials" value="Coated &amp; Uncoated Paper Rolls"> Coated &amp; Uncoated Paper Rolls</label>
-            <label class="check"><input type="checkbox" name="materials" value="Adhesive Backed Materials"> Adhesive Backed Materials</label>
-            <label class="check"><input type="checkbox" name="materials" value="Plastic Film"> Plastic Film</label>
-            <label class="check"><input type="checkbox" name="materials" value="Non-Woven Fabric"> Non-Woven Fabric</label>
-              </div>
-            </fieldset>
-            <div class="field"><label for="message">Please share any details about your material</label><textarea id="message" name="message" placeholder="Tell us what material you have, roughly how much, and where it is."></textarea></div>
-            <button class="btn btn--primary" type="submit">Get a quote</button>
-            <p class="form-note">We'll use your details to respond to your request. See our <a href="#privacy">Privacy Policy</a>.</p>
-            <p class="form-note">This demo form is not yet wired to an inbox.</p>
-          </form>
+          <script charset="utf-8" type="text/javascript" src="//js-na3.hsforms.net/forms/embed/v2.js"></script>
+          <div id="hubspot-quote-form">
+            <script>
+              if (window.hbspt) hbspt.forms.create({
+                portalId: "343635070",
+                formId: "f31613f0-a8e6-48aa-894a-af86b89e1a0d",
+                region: "na3",
+                // Record each successful quote request as a GA4 lead (mark generate_lead as a key event in GA4).
+                onFormSubmitted: function () {
+                  var prev = "";
+                  try {
+                    var ref = document.referrer && new URL(document.referrer);
+                    if (ref && ref.hostname === location.hostname) prev = ref.pathname;
+                  } catch (e) {}
+                  if (window.gtag) {
+                    gtag("event", "generate_lead", {
+                      form_name: "quote_request",
+                      form_id: "f31613f0-a8e6-48aa-894a-af86b89e1a0d",
+                      previous_page: prev || "(direct)"
+                    });
+                  }
+                }
+              });
+            </script>
+          </div>
+          <noscript><p class="form-note">Please enable JavaScript to use the quote form.</p></noscript>
+          <script>
+            // Every quote button on the site lands here, so say so if a content blocker stops the form loading.
+            setTimeout(function () {
+              var box = document.getElementById('hubspot-quote-form');
+              if (box && !box.querySelector('form')) {
+                var p = document.createElement('p');
+                p.className = 'form-note'; p.setAttribute('role', 'status');
+                p.textContent = "The quote form didn't load, please disable your ad blocker on this website to enable and access the quote form.";
+                box.appendChild(p);
+              }
+            }, 8000);
+          </script>
+          <p class="form-note">We'll use your details to respond to your request.</p>
         </div>
       </div>
     </div>
