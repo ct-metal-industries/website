@@ -8,13 +8,13 @@
    - HubSpot tracking is only loaded after opt-in.
    - The choice is stored in localStorage for 12 months, then asked again.
    - Any element with [data-cookie-settings] reopens the preferences.
-   - Set PRIVACY_URL once the privacy policy page exists to show a "Learn more" link. */
+   - PRIVACY_URL adds a "Learn more" link to the banner; leave it empty to hide the link. */
 (function () {
   var STORAGE_KEY = 'ctm-cookie-consent';
   var VERSION = 1;
   var MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
   var HUBSPOT_SRC = '//js-na3.hs-scripts.com/343635070.js';
-  var PRIVACY_URL = '';
+  var PRIVACY_URL = '/privacy-policy#cookies';
 
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
