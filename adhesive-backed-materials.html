@@ -53,10 +53,20 @@
   }
 }
 </script>
+<!-- Cookie consent: must load before the Google tag. HubSpot tracking loads from here after opt-in. -->
+<script src="assets/js/consent.js?v=17672d90"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5FY2DNFJ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5FY2DNFJ9');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Condensed:ital,wght@0,400;0,500;0,700;1,700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=8e7fcc53">
+<link rel="stylesheet" href="assets/css/styles.css?v=d307a10d">
 <link rel="stylesheet" href="assets/css/brand.css?v=2f48b66b">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -178,8 +188,15 @@
         <iframe class="footer__map" title="Map of Connecticut Metal Industries, Inc., 1 Riverside Dr # G, Ansonia, CT" src="https://maps.google.com/maps?q=1+Riverside+Dr+%23+G,+Ansonia,+CT+06401,+United+States&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
+    <div class="footer__network">
+      <div class="footer__network-badge">
+        <img src="assets/img/circular-innovation-council-member.png" alt="Member of Circular Innovation Council 2026/2027" width="640" height="300" loading="lazy">
+        <p><a href="https://clnenv.com" target="_blank" rel="noopener">Clean Lifecycle Network<span class="visually-hidden"> (opens in a new window)</span></a> and its brands, including CT Metal Industries, are proud members of Canada's Circular Innovation Council.</p>
+      </div>
+    </div>
     <div class="footer__bottom">
       <span>&copy; <span id="year">2026</span> Connecticut Metal Industries, Inc. All rights reserved.</span>
+      <span><button type="button" class="footer__cookie-link" data-cookie-settings>Cookie settings</button></span>
       <span>Mon&ndash;Fri 9AM&ndash;5PM EST</span>
     </div>
   </div>

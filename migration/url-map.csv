@@ -1,0 +1,135 @@
+old_path,found_in,status_on_old_site_today,new_destination,handled_by,note
+/,sitemap,200,/,same URL,
+/about/,sitemap,200,/about,auto,Vercel strips the trailing slash
+/contact-us/,sitemap,200,/contact,vercel.json,Slug changed
+/aluminum-foil-and-laminates/,sitemap,200,/aluminum-foil-and-laminates,auto,Same slug; Vercel strips the trailing slash
+/metallized-film-and-paper-rolls/,sitemap,200,/metallized-film-and-paper-rolls,auto,Same slug; Vercel strips the trailing slash
+/coated-and-uncoated-paper-rolls/,sitemap,200,/coated-and-uncoated-paper-rolls,auto,Same slug; Vercel strips the trailing slash
+/adhesive-backed-materials/,sitemap,200,/adhesive-backed-materials,auto,Same slug; Vercel strips the trailing slash
+/plastic-film/,sitemap,200,/plastic-film,auto,Same slug; Vercel strips the trailing slash
+/non-woven-fabric/,sitemap,200,/non-woven-fabric,auto,Same slug; Vercel strips the trailing slash
+/hb_testimonials/gary-m/,sitemap,200,,none,"Theme demo testimonial about a roofing company; not migrated, returns 404 on purpose"
+/hb_testimonials/billy-k/,sitemap,200,,none,"Theme demo testimonial about a roofing company; not migrated, returns 404 on purpose"
+/hb_testimonials/dave-h/,sitemap,200,,none,"Theme demo testimonial about a roofing company; not migrated, returns 404 on purpose"
+/hb_testimonials/tyler-o/,sitemap,200,,none,"Theme demo testimonial about a roofing company; not migrated, returns 404 on purpose"
+/portfolio/lenny/,sitemap,200,,none,"Theme demo portfolio item (lorem ipsum); not migrated, returns 404 on purpose"
+/portfolio/patrick-star/,sitemap,200,,none,"Theme demo portfolio item (lorem ipsum); not migrated, returns 404 on purpose"
+/portfolio/oscar/,sitemap,200,,none,"Theme demo portfolio item (lorem ipsum); not migrated, returns 404 on purpose"
+/portfolio/steve-austin/,sitemap,200,,none,"Theme demo portfolio item (lorem ipsum); not migrated, returns 404 on purpose"
+/category/uncategorized/,crawl,200,/,vercel.json,Empty WordPress category archive
+/ctmetal.com/aluminum-foil-and-laminates/,crawl,301,/aluminum-foil-and-laminates,vercel.json,Broken relative link on the old homepage that WordPress 301s to the real page
+/ctmetal.com/metallized-film-and-paper-rolls/,crawl,301,/metallized-film-and-paper-rolls,vercel.json,Broken relative link on the old homepage that WordPress 301s to the real page
+/ctmetal.com/coated-and-uncoated-paper-rolls/,crawl,301,/coated-and-uncoated-paper-rolls,vercel.json,Broken relative link on the old homepage that WordPress 301s to the real page
+/ctmetal.com/adhesive-backed-materials/,crawl,301,/adhesive-backed-materials,vercel.json,Broken relative link on the old homepage that WordPress 301s to the real page
+/ctmetal.com/non-woven-fabric/,crawl,301,/non-woven-fabric,vercel.json,Broken relative link on the old homepage that WordPress 301s to the real page
+/webmail,crawl,200,https://webmail.ctmetal.com,vercel.json,HostGator cPanel webmail shortcut; staff bookmark. Temporary redirect
+/cpanel,crawl,200,https://cpanel.ctmetal.com,vercel.json,HostGator cPanel shortcut. Temporary redirect
+/feed/,crawl,200,,none,RSS feed with only the homepage in it
+/comments/feed/,crawl,200,,none,WordPress comments feed
+/wp-login.php,crawl,200,,none,WordPress login; should 404
+/wp-admin/,crawl,302,,none,WordPress admin; should 404
+/xmlrpc.php,crawl,405,,none,WordPress XML-RPC; should 404
+/wp-json/,crawl,200,,none,WordPress REST API; should 404
+/page-sitemap.xml,crawl,200,,none,Yoast sitemap; replaced by /sitemap.xml
+/sitemap_index.xml,crawl,200,,none,Yoast sitemap index; replaced by /sitemap.xml
+/?s=...,crawl,200,,none,WordPress search; query string is ignored and the homepage loads
+/about-us.html,wayback,404,/about,vercel.json,Earlier version of the site
+/contact.html,wayback,404,/contact,auto,Earlier version of the site; cleanUrls handles the extension
+/contact.php,wayback,409,/contact,vercel.json,Earlier version of the site
+/adhesive-backed-materials.html,wayback,404,/adhesive-backed-materials,auto,Earlier version of the site; cleanUrls handles the extension
+/aluminum-foil-laminates.html,wayback,404,/aluminum-foil-and-laminates,vercel.json,Earlier version of the site
+/metallized-film-paper-rolls.html,wayback,404,/metallized-film-and-paper-rolls,vercel.json,Earlier version of the site
+/paper-rolls.html,wayback,404,/coated-and-uncoated-paper-rolls,vercel.json,Earlier version of the site
+/fabric.html,wayback,404,/non-woven-fabric,vercel.json,Earlier version of the site
+/index.html,wayback,404,/,auto,Earlier version of the site; cleanUrls handles the extension
+/index.htm,wayback,404,/,vercel.json,Earliest version of the site
+/18%Aluminum.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/18%aluminum_foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/18%foilpage.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/25%Aluminum.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/25%aluminum_foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/25%foilpage.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/45% Aluminum Cable Wrap.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/45% cable foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/45%aluminum_foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/75% Aluminum Foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/75%aluminum_foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/75%foilpage.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/85%aluminum_foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/85%foilpage.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/affiliates.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/alfoils.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/alspecs.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/Aluminum Bottle Caps.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Aluminum Cans.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Aluminum Cans1.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Aluminum Foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/Aluminum Scrap.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/aluminum.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/aluminumcans.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/AluminumCaps.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/aluminumfoil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/aluminumscrap.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/aluminunScrap.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Article - Gold Leaf Reproduction.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Bare Aluminum Foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/Barealuminum_foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/barefoilpage.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/bottlecapspage.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/Paffilia.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/Paluminum.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/Pfrequent.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/Pglass.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/Phistoric.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/Pindex.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/Pplastic.htm,wayback,404,/plastic-film,csv only,Plastics
+/CMIPORT/Precycli.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/Psteel.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIPORT/ptollprice.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/CMIWEB/index.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Company History.htm,wayback,404,/about,csv only,Company history
+/contact.htm,wayback,404,/contact,csv only,Sales enquiry
+/contactus.htm,wayback,404,/contact,csv only,Sales enquiry
+/education.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/frequent.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Frequently Asked Questions.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/frequently_asked_questions.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/General Recycling Information.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/genrecyclinginfo.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Glass Recycling.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/glass.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/glass_recycling.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/gold/,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/gold/gold1.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/gold/gold2.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/gold/index.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Historic Pricing.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/historic.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/historicpricing.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/HistoricPricing1.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/history.htm,wayback,404,/about,csv only,Company history
+/item_14.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/item_26.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/pcaluminum_foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/plastic more info.htm,wayback,404,/plastic-film,csv only,Plastics
+/Plastic Recycling.htm,wayback,404,/plastic-film,csv only,Plastics
+/Plastic Recycling1.htm,wayback,404,/plastic-film,csv only,Plastics
+/plastic.htm,wayback,404,/plastic-film,csv only,Plastics
+/plastics.htm,wayback,404,/plastic-film,csv only,Plastics
+/post_consumer_foil.htm,wayback,404,/aluminum-foil-and-laminates,csv only,Aluminum foil
+/recyclin.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Recycling Equipment.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Recycling Links1.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Recycling Photos.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/recycling_affiliations.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/recycling_equipment.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/recycling_photos.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/scrap_for_sale.htm,wayback,404,/contact,csv only,Sales enquiry
+/sitemap.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Steel Tin Can Recycling.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/steel.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Tin Cans.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/Tin Cans1.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/tin more info.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/tincans.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"
+/tollpric.htm,wayback,404,/,csv only,"Material or topic CT Metal no longer publishes (cans, tin, glass, steel, pricing, links, photos, FAQ); nearest is the homepage"

@@ -4,7 +4,33 @@
   "trailingSlash": false,
   "headers": [
     { "source": "/(.*)", "has": [{ "type": "host", "value": ".*\\.vercel\\.app" }], "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] },
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+      { "key": "Content-Security-Policy", "value": "frame-ancestors 'self'" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+      { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" }
+    ] },
     { "source": "/assets/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
     { "source": "/assets/(css|js)/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] }
+  ],
+  "redirects": [
+    {"source": "/(.*)", "has": [{"type": "host", "value": "www.ctmetal.com"}], "destination": "https://ctmetal.com/$1", "permanent": true},
+    {"source": "/contact-us{/}?", "destination": "/contact", "permanent": true},
+    {"source": "/ctmetal.com/aluminum-foil-and-laminates{/}?", "destination": "/aluminum-foil-and-laminates", "permanent": true},
+    {"source": "/ctmetal.com/metallized-film-and-paper-rolls{/}?", "destination": "/metallized-film-and-paper-rolls", "permanent": true},
+    {"source": "/ctmetal.com/coated-and-uncoated-paper-rolls{/}?", "destination": "/coated-and-uncoated-paper-rolls", "permanent": true},
+    {"source": "/ctmetal.com/adhesive-backed-materials{/}?", "destination": "/adhesive-backed-materials", "permanent": true},
+    {"source": "/ctmetal.com/non-woven-fabric{/}?", "destination": "/non-woven-fabric", "permanent": true},
+    {"source": "/category/:path*", "destination": "/", "permanent": true},
+    {"source": "/webmail{/}?", "destination": "https://webmail.ctmetal.com", "permanent": false},
+    {"source": "/cpanel{/}?", "destination": "https://cpanel.ctmetal.com", "permanent": false},
+    {"source": "/about-us", "destination": "/about", "permanent": true},
+    {"source": "/contact.php", "destination": "/contact", "permanent": true},
+    {"source": "/aluminum-foil-laminates", "destination": "/aluminum-foil-and-laminates", "permanent": true},
+    {"source": "/metallized-film-paper-rolls", "destination": "/metallized-film-and-paper-rolls", "permanent": true},
+    {"source": "/paper-rolls", "destination": "/coated-and-uncoated-paper-rolls", "permanent": true},
+    {"source": "/fabric", "destination": "/non-woven-fabric", "permanent": true},
+    {"source": "/index.htm", "destination": "/", "permanent": true}
   ]
 }

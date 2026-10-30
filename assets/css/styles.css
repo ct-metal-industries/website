@@ -862,3 +862,36 @@ h2 { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.1rem); }
 
 /* eyebrow inside a dark hero */
 .hero .eyebrow { color: rgba(255,255,255,.8); margin-bottom: 22px; display: inline-block; }
+
+/* ===========================================================
+   Cookie consent (assets/js/consent.js)
+   =========================================================== */
+.cookie-consent { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 1000; display: flex; justify-content: flex-start; pointer-events: none; }
+.cookie-consent[hidden] { display: none; }
+.cookie-consent__panel { position: relative; overflow: hidden; pointer-events: auto; width: 100%; max-width: 560px; padding: 26px 22px 18px; background: var(--paper); color: var(--ink-700); border-radius: var(--radius-lg); box-shadow: var(--shadow-md), 0 0 0 1px var(--line); animation: cookie-in .35s ease-out; }
+.cookie-consent__panel::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--seg, var(--green-600)); }
+@keyframes cookie-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .cookie-consent__panel { animation: none; } }
+.cookie-consent__title { margin: 0 0 8px; font: italic 700 1.3rem/1.05 var(--font-cond); text-transform: uppercase; color: var(--ink-900); }
+.cookie-consent__text { margin: 0 0 14px; font-size: .9rem; line-height: 1.55; }
+.cookie-consent__text a { color: var(--green-700); font-weight: 700; }
+.cookie-consent__prefs { display: grid; gap: 8px; margin: 0 0 14px; }
+.cookie-consent__prefs[hidden] { display: none; }
+.cookie-consent__option { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); font-size: .85rem; line-height: 1.45; cursor: pointer; }
+.cookie-consent__option input { margin-top: 3px; accent-color: var(--green-600); width: 16px; height: 16px; flex-shrink: 0; }
+.cookie-consent__option strong { display: block; color: var(--ink-900); }
+.cookie-consent__actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.cookie-consent__actions .btn { padding: 11px 18px; font-size: .86rem; }
+.cookie-consent__actions [hidden] { display: none; }
+@media (max-width: 480px) { .cookie-consent { left: 8px; right: 8px; bottom: 8px; } .cookie-consent__actions .btn { flex: 1 1 auto; justify-content: center; } }
+.footer__cookie-link { padding: 0; border: 0; background: none; font: inherit; color: #b8c3c8; cursor: pointer; }
+.footer__cookie-link:hover { color: #fff; text-decoration: underline; }
+
+/* Network badge row in the footer (mirrors Green Spill Kits) */
+.footer__network { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px; padding: 0 0 36px; }
+.footer__network-badge { display: flex; align-items: center; gap: 16px; max-width: 480px; }
+.footer__network-badge img { width: 220px; height: auto; flex-shrink: 0; padding: 8px 10px; border-radius: 10px; background: #fff; }
+.footer__network-badge p { margin: 0; font-size: .72rem; color: rgba(255,255,255,.55); }
+.footer__network-badge p a { color: var(--accent, #7fa4ce); font-weight: 700; text-decoration: none; }
+.footer__network-badge p a:hover { text-decoration: underline; }
+@media (max-width: 480px) { .footer__network-badge { flex-direction: column; align-items: flex-start; } }
