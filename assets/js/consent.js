@@ -87,7 +87,7 @@
         '<div id="cookie-consent-title" class="cookie-consent__title">We value your privacy</div>' +
         '<p id="cookie-consent-desc" class="cookie-consent__text">We use cookies to understand how visitors use our site and to improve our marketing. ' +
           'You can accept all, reject non-essential cookies, or choose which to allow.' +
-          (PRIVACY_URL ? ' <a href="' + PRIVACY_URL + '">Learn more</a>' : '') + '</p>' +
+          (PRIVACY_URL ? ' <a href="' + PRIVACY_URL + '">Read our Privacy Policy</a>' : '') + '</p>' +
         '<div class="cookie-consent__prefs" hidden>' +
           '<label class="cookie-consent__option"><input type="checkbox" checked disabled>' +
             '<span><strong>Essential</strong> Required for the site to work. Always on.</span></label>' +
