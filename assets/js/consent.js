@@ -5,7 +5,8 @@
      are off until the visitor opts in.
    - Google Analytics always loads, but in Consent Mode: no cookies are set
      unless analytics is accepted.
-   - Clarity and HubSpot tracking are only loaded after opt-in.
+   - Clarity is only loaded after opt-in. HubSpot tracking is a plain <script id="hs-script-loader">
+     at the end of every page, so it loads whatever the choice; loadScript skips it if it is already there.
    - The choice is stored in localStorage for 12 months, then asked again.
    - Any element with [data-cookie-settings] reopens the preferences.
    - PRIVACY_URL adds a "Learn more" link to the banner; leave it empty to hide the link. */
@@ -44,7 +45,7 @@
 
   var loaded = {};
   function loadScript(id, src) {
-    if (loaded[id]) return;
+    if (loaded[id] || document.getElementById(id)) return;
     loaded[id] = true;
     var s = document.createElement('script');
     s.async = true; s.defer = true; s.id = id; s.src = src;
