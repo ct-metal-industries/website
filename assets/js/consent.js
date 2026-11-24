@@ -1,12 +1,13 @@
 /* Cookie consent for CT Metal Industries.
    Loaded in <head> before the Google tag so consent defaults apply first.
 
-   - Analytics (Google Analytics, Microsoft Clarity) and Marketing (HubSpot)
-     are off until the visitor opts in.
+   - Analytics (Google Analytics, Microsoft Clarity) and Marketing (Google's advertising
+     consent signals) are off until the visitor opts in.
    - Google Analytics always loads, but in Consent Mode: no cookies are set
      unless analytics is accepted.
-   - Clarity is only loaded after opt-in. HubSpot tracking is a plain <script id="hs-script-loader">
-     at the end of every page, so it loads whatever the choice; loadScript skips it if it is already there.
+   - Clarity is only loaded after opt-in.
+   - HubSpot is not controlled here: its tracking code is a plain <script id="hs-script-loader">
+     at the end of every page and loads whatever the choice (see the Privacy Policy, "HubSpot (always on)").
    - The choice is stored in localStorage for 12 months, then asked again.
    - Any element with [data-cookie-settings] reopens the preferences.
    - PRIVACY_URL adds a "Learn more" link to the banner; leave it empty to hide the link. */
@@ -15,7 +16,6 @@
   var VERSION = 1;
   var MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
   var CLARITY_ID = 'z7fz3so0x8';
-  var HUBSPOT_SRC = '//js-na3.hs-scripts.com/343635070.js';
   var PRIVACY_URL = '/privacy-policy#cookies';
 
   window.dataLayer = window.dataLayer || [];
@@ -45,7 +45,7 @@
 
   var loaded = {};
   function loadScript(id, src) {
-    if (loaded[id] || document.getElementById(id)) return;
+    if (loaded[id]) return;
     loaded[id] = true;
     var s = document.createElement('script');
     s.async = true; s.defer = true; s.id = id; s.src = src;
@@ -67,7 +67,6 @@
     if (c.analytics && window.clarity) {
       window.clarity('consentv2', { analytics_Storage: 'granted', ad_Storage: c.marketing ? 'granted' : 'denied' });
     }
-    if (c.marketing) loadScript('hs-script-loader', HUBSPOT_SRC);
   }
 
   function choose(c, wasSet) {
@@ -96,15 +95,17 @@
       '<div class="cookie-consent__panel">' +
         '<div id="cookie-consent-title" class="cookie-consent__title">We value your privacy</div>' +
         '<p id="cookie-consent-desc" class="cookie-consent__text">We use cookies to understand how visitors use our site and to improve our marketing. ' +
-          'You can accept all, reject non-essential cookies, or choose which to allow.' +
+          'You can accept all, reject non-essential cookies (other than HubSpot, which is always on), or choose which to allow.' +
           (PRIVACY_URL ? ' <a href="' + PRIVACY_URL + '">Read our Privacy Policy</a>' : '') + '</p>' +
         '<div class="cookie-consent__prefs" hidden>' +
           '<label class="cookie-consent__option"><input type="checkbox" checked disabled>' +
             '<span><strong>Essential</strong> Required for the site to work. Always on.</span></label>' +
+          '<label class="cookie-consent__option"><input type="checkbox" checked disabled>' +
+            '<span><strong>HubSpot</strong> Helps us follow up on enquiries and measure our campaigns. Always on, whatever you choose here.</span></label>' +
           '<label class="cookie-consent__option"><input type="checkbox" name="analytics">' +
             '<span><strong>Analytics</strong> Google Analytics and Microsoft Clarity help us see which pages are useful.</span></label>' +
           '<label class="cookie-consent__option"><input type="checkbox" name="marketing">' +
-            '<span><strong>Marketing</strong> HubSpot helps us follow up on enquiries and measure our campaigns.</span></label>' +
+            '<span><strong>Marketing</strong> Lets us send advertising-related consent signals to Google. We do not currently use Google advertising tags.</span></label>' +
         '</div>' +
         '<div class="cookie-consent__actions">' +
           '<button type="button" class="btn btn--outline" data-action="manage">Manage preferences</button>' +
