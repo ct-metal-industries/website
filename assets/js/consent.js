@@ -101,7 +101,7 @@
           '<label class="cookie-consent__option"><input type="checkbox" checked disabled>' +
             '<span><strong>Essential</strong> Required for the site to work. Always on.</span></label>' +
           '<label class="cookie-consent__option"><input type="checkbox" checked disabled>' +
-            '<span><strong>HubSpot</strong> Helps us follow up on enquiries and measure our campaigns. Always on, whatever you choose here.</span></label>' +
+            '<span><strong>HubSpot</strong> Helps us follow up on enquiries and measure our campaigns. Loads automatically.</span></label>' +
           '<label class="cookie-consent__option"><input type="checkbox" name="analytics">' +
             '<span><strong>Analytics</strong> Google Analytics and Microsoft Clarity help us see which pages are useful.</span></label>' +
           '<label class="cookie-consent__option"><input type="checkbox" name="marketing">' +
